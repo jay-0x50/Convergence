@@ -1,0 +1,7 @@
+{
+  "name": "Convergence.Core",
+  "rootNamespace": "Convergence.Duel",
+  "references": [],
+  "autoReferenced": true,
+  "noEngineReferences": true
+}

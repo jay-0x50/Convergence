@@ -1,0 +1,7 @@
+{
+  "name": "Convergence.Editor",
+  "rootNamespace": "Convergence.Editor",
+  "references": ["Convergence.Core", "Convergence.Runtime"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

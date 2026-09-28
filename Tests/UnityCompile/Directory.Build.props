@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <WarningsAsErrors>$(WarningsAsErrors);CS2008</WarningsAsErrors>
+    <DefineConstants>$(DefineConstants);UNITY_EDITOR;UNITY_STANDALONE_WIN</DefineConstants>
+    <UnityEditorPath Condition="'$(UnityEditorPath)' == ''">C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor</UnityEditorPath>
+    <UnityManagedPath>$(UnityEditorPath)/Data/Managed</UnityManagedPath>
+    <NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+</Project>

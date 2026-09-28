@@ -1,0 +1,6 @@
+{
+  "name": "Convergence.Runtime",
+  "rootNamespace": "Convergence.Prototype",
+  "references": ["Convergence.Core"],
+  "autoReferenced": true
+}

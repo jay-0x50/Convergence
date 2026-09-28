@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Convergence.Runtime</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../../Assets/Scripts/Runtime/*.cs" Link="Source/%(Filename)%(Extension)" />
+    <ProjectReference Include="../Core/Convergence.Core.csproj" />
+    <Reference Include="$(UnityManagedPath)/UnityEngine/UnityEngine*.dll" Private="false" />
+  </ItemGroup>
+  <Target Name="CheckUnityInstallation" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(UnityManagedPath)/UnityEngine/UnityEngine.CoreModule.dll')"
+      Text="Unity managed assemblies were not found. Set UnityEditorPath to the installed editor folder containing Data/Managed." />
+  </Target>
+</Project>

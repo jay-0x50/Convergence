@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Convergence.Editor</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../../Assets/Editor/*.cs" Link="Source/%(Filename)%(Extension)" />
+    <ProjectReference Include="../Core/Convergence.Core.csproj" />
+    <ProjectReference Include="../Runtime/Convergence.Runtime.csproj" />
+    <Reference Include="$(UnityManagedPath)/UnityEngine/UnityEngine*.dll" Private="false" />
+    <!-- Unity 6 stores its editor facade/modules here; mixing its root monolith duplicates types. -->
+    <Reference Include="$(UnityManagedPath)/UnityEngine/UnityEditor*.dll" Private="false" />
+    <Reference Include="$(UnityManagedPath)/UnityEditor.dll" Private="false"
+      Condition="!Exists('$(UnityManagedPath)/UnityEngine/UnityEditor.dll')" />
+    <Reference Include="$(UnityManagedPath)/UnityEditor/*.dll" Private="false" />
+  </ItemGroup>
+</Project>
